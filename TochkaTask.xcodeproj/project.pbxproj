@@ -9,23 +9,27 @@
 /* Begin PBXBuildFile section */
 		916546FC25D0299E00E29EB2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 916546FB25D0299E00E29EB2 /* AppDelegate.swift */; };
 		916546FE25D0299E00E29EB2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 916546FD25D0299E00E29EB2 /* SceneDelegate.swift */; };
-		9165470025D0299E00E29EB2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 916546FF25D0299E00E29EB2 /* ViewController.swift */; };
+		9165470025D0299E00E29EB2 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 916546FF25D0299E00E29EB2 /* MainViewController.swift */; };
 		9165470325D0299E00E29EB2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9165470125D0299E00E29EB2 /* Main.storyboard */; };
 		9165470625D0299E00E29EB2 /* TochkaTask.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9165470425D0299E00E29EB2 /* TochkaTask.xcdatamodeld */; };
 		9165470825D0299F00E29EB2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9165470725D0299F00E29EB2 /* Assets.xcassets */; };
 		9165470B25D0299F00E29EB2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9165470925D0299F00E29EB2 /* LaunchScreen.storyboard */; };
+		9165471925D02CCD00E29EB2 /* ViewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9165471825D02CCD00E29EB2 /* ViewData.swift */; };
+		9165471D25D02DCD00E29EB2 /* NewsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9165471C25D02DCD00E29EB2 /* NewsViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		916546F825D0299E00E29EB2 /* TochkaTask.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TochkaTask.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		916546FB25D0299E00E29EB2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		916546FD25D0299E00E29EB2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		916546FF25D0299E00E29EB2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		916546FF25D0299E00E29EB2 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		9165470225D0299E00E29EB2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9165470525D0299E00E29EB2 /* TochkaTask.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TochkaTask.xcdatamodel; sourceTree = "<group>"; };
 		9165470725D0299F00E29EB2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9165470A25D0299F00E29EB2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9165470C25D0299F00E29EB2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9165471825D02CCD00E29EB2 /* ViewData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewData.swift; sourceTree = "<group>"; };
+		9165471C25D02DCD00E29EB2 /* NewsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,9 +62,9 @@
 		916546FA25D0299E00E29EB2 /* TochkaTask */ = {
 			isa = PBXGroup;
 			children = (
+				9165471525D02C9200E29EB2 /* MainModule */,
 				916546FB25D0299E00E29EB2 /* AppDelegate.swift */,
 				916546FD25D0299E00E29EB2 /* SceneDelegate.swift */,
-				916546FF25D0299E00E29EB2 /* ViewController.swift */,
 				9165470125D0299E00E29EB2 /* Main.storyboard */,
 				9165470725D0299F00E29EB2 /* Assets.xcassets */,
 				9165470925D0299F00E29EB2 /* LaunchScreen.storyboard */,
@@ -68,6 +72,40 @@
 				9165470425D0299E00E29EB2 /* TochkaTask.xcdatamodeld */,
 			);
 			path = TochkaTask;
+			sourceTree = "<group>";
+		};
+		9165471425D02C7900E29EB2 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				916546FF25D0299E00E29EB2 /* MainViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		9165471525D02C9200E29EB2 /* MainModule */ = {
+			isa = PBXGroup;
+			children = (
+				9165471B25D02DBB00E29EB2 /* ViewModel */,
+				9165471725D02CBC00E29EB2 /* Model */,
+				9165471425D02C7900E29EB2 /* View */,
+			);
+			path = MainModule;
+			sourceTree = "<group>";
+		};
+		9165471725D02CBC00E29EB2 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				9165471825D02CCD00E29EB2 /* ViewData.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		9165471B25D02DBB00E29EB2 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				9165471C25D02DCD00E29EB2 /* NewsViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -141,9 +179,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				9165470625D0299E00E29EB2 /* TochkaTask.xcdatamodeld in Sources */,
-				9165470025D0299E00E29EB2 /* ViewController.swift in Sources */,
+				9165471D25D02DCD00E29EB2 /* NewsViewModel.swift in Sources */,
+				9165470025D0299E00E29EB2 /* MainViewController.swift in Sources */,
 				916546FC25D0299E00E29EB2 /* AppDelegate.swift in Sources */,
 				916546FE25D0299E00E29EB2 /* SceneDelegate.swift in Sources */,
+				9165471925D02CCD00E29EB2 /* ViewData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
