@@ -20,6 +20,15 @@ final class NewsViewModel: NewsViewModelProtocol {
     }
     
     public func startFetch() {
-        updateViewData?(.loading(ViewData.NewsData(imageUrl: nil, title: nil, description: nil)))
+        updateViewData?(.loading)
+        APIClient.fetch() { result in
+            switch result {
+                case .success(let success):
+                    self.updateViewData?(.success(success))
+                case .failure(let error):
+                    print(error.localizedDescription)
+                    self.updateViewData?(.failure)
+                }
+        }
     }
 }
