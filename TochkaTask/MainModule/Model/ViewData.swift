@@ -6,18 +6,27 @@
 //
 
 import Foundation
+import Alamofire
 
-
-// прочитать про ассоциативные данные в енаме
 enum ViewData {
     case initial
-    case loading(NewsData)
-    case success(NewsData)
-    case failure(NewsData)
+    case loading
+    case success(NewsResponse)
+    case failure
     
-    struct NewsData {
-        let imageUrl: String?
-        let title: String?
-        let description: String?
+    struct NewsResponse: Codable {
+        let status: String
+        let totalResults: Int
+        let articles: [NewsData]
+    }
+
+    struct NewsData: Codable {
+        var author: String?
+        var title: String?
+        var description: String?
+        var url: String?
+        var urlToImage: String?
+        var publishedAt: String?
+        var content: String?
     }
 }

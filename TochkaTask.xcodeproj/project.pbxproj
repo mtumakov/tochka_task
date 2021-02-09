@@ -3,33 +3,41 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8DC8D46643EFE3CEE4C64E7B /* Pods_TochkaTask.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E36945B8E4D5EB32DF5F6B7B /* Pods_TochkaTask.framework */; };
 		916546FC25D0299E00E29EB2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 916546FB25D0299E00E29EB2 /* AppDelegate.swift */; };
 		916546FE25D0299E00E29EB2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 916546FD25D0299E00E29EB2 /* SceneDelegate.swift */; };
 		9165470025D0299E00E29EB2 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 916546FF25D0299E00E29EB2 /* MainViewController.swift */; };
-		9165470325D0299E00E29EB2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9165470125D0299E00E29EB2 /* Main.storyboard */; };
 		9165470625D0299E00E29EB2 /* TochkaTask.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9165470425D0299E00E29EB2 /* TochkaTask.xcdatamodeld */; };
 		9165470825D0299F00E29EB2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9165470725D0299F00E29EB2 /* Assets.xcassets */; };
 		9165470B25D0299F00E29EB2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9165470925D0299F00E29EB2 /* LaunchScreen.storyboard */; };
 		9165471925D02CCD00E29EB2 /* ViewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9165471825D02CCD00E29EB2 /* ViewData.swift */; };
 		9165471D25D02DCD00E29EB2 /* NewsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9165471C25D02DCD00E29EB2 /* NewsViewModel.swift */; };
+		9165473925D10FB400E29EB2 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9165473825D10FB400E29EB2 /* MainView.swift */; };
+		9165474025D1170300E29EB2 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9165473F25D1170300E29EB2 /* APIClient.swift */; };
+		9165474525D1255200E29EB2 /* MainView + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9165474425D1255200E29EB2 /* MainView + Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4CC36D54E928C8A1234133FE /* Pods-TochkaTask.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TochkaTask.release.xcconfig"; path = "Target Support Files/Pods-TochkaTask/Pods-TochkaTask.release.xcconfig"; sourceTree = "<group>"; };
+		83097CAE89056DC4E6A390E4 /* Pods-TochkaTask.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TochkaTask.debug.xcconfig"; path = "Target Support Files/Pods-TochkaTask/Pods-TochkaTask.debug.xcconfig"; sourceTree = "<group>"; };
 		916546F825D0299E00E29EB2 /* TochkaTask.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TochkaTask.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		916546FB25D0299E00E29EB2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		916546FD25D0299E00E29EB2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		916546FF25D0299E00E29EB2 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
-		9165470225D0299E00E29EB2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9165470525D0299E00E29EB2 /* TochkaTask.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TochkaTask.xcdatamodel; sourceTree = "<group>"; };
 		9165470725D0299F00E29EB2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9165470A25D0299F00E29EB2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9165470C25D0299F00E29EB2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9165471825D02CCD00E29EB2 /* ViewData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewData.swift; sourceTree = "<group>"; };
 		9165471C25D02DCD00E29EB2 /* NewsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsViewModel.swift; sourceTree = "<group>"; };
+		9165473825D10FB400E29EB2 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		9165473F25D1170300E29EB2 /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
+		9165474425D1255200E29EB2 /* MainView + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MainView + Extension.swift"; sourceTree = "<group>"; };
+		E36945B8E4D5EB32DF5F6B7B /* Pods_TochkaTask.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TochkaTask.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,17 +45,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8DC8D46643EFE3CEE4C64E7B /* Pods_TochkaTask.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3A315BFF67C29E2CC691E79B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E36945B8E4D5EB32DF5F6B7B /* Pods_TochkaTask.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		916546EF25D0299E00E29EB2 = {
 			isa = PBXGroup;
 			children = (
 				916546FA25D0299E00E29EB2 /* TochkaTask */,
 				916546F925D0299E00E29EB2 /* Products */,
+				AE4958ACA4EBD9128CC6D238 /* Pods */,
+				3A315BFF67C29E2CC691E79B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -65,7 +84,6 @@
 				9165471525D02C9200E29EB2 /* MainModule */,
 				916546FB25D0299E00E29EB2 /* AppDelegate.swift */,
 				916546FD25D0299E00E29EB2 /* SceneDelegate.swift */,
-				9165470125D0299E00E29EB2 /* Main.storyboard */,
 				9165470725D0299F00E29EB2 /* Assets.xcassets */,
 				9165470925D0299F00E29EB2 /* LaunchScreen.storyboard */,
 				9165470C25D0299F00E29EB2 /* Info.plist */,
@@ -78,6 +96,8 @@
 			isa = PBXGroup;
 			children = (
 				916546FF25D0299E00E29EB2 /* MainViewController.swift */,
+				9165473825D10FB400E29EB2 /* MainView.swift */,
+				9165474425D1255200E29EB2 /* MainView + Extension.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -85,6 +105,7 @@
 		9165471525D02C9200E29EB2 /* MainModule */ = {
 			isa = PBXGroup;
 			children = (
+				9165472C25D05A4700E29EB2 /* Network */,
 				9165471B25D02DBB00E29EB2 /* ViewModel */,
 				9165471725D02CBC00E29EB2 /* Model */,
 				9165471425D02C7900E29EB2 /* View */,
@@ -108,6 +129,23 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
+		9165472C25D05A4700E29EB2 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				9165473F25D1170300E29EB2 /* APIClient.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		AE4958ACA4EBD9128CC6D238 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				83097CAE89056DC4E6A390E4 /* Pods-TochkaTask.debug.xcconfig */,
+				4CC36D54E928C8A1234133FE /* Pods-TochkaTask.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -115,9 +153,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9165470F25D0299F00E29EB2 /* Build configuration list for PBXNativeTarget "TochkaTask" */;
 			buildPhases = (
+				7173876215372E02080B0157 /* [CP] Check Pods Manifest.lock */,
 				916546F425D0299E00E29EB2 /* Sources */,
 				916546F525D0299E00E29EB2 /* Frameworks */,
 				916546F625D0299E00E29EB2 /* Resources */,
+				EBCD74665B576027AA65D2D0 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -167,11 +207,52 @@
 			files = (
 				9165470B25D0299F00E29EB2 /* LaunchScreen.storyboard in Resources */,
 				9165470825D0299F00E29EB2 /* Assets.xcassets in Resources */,
-				9165470325D0299E00E29EB2 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		7173876215372E02080B0157 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TochkaTask-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EBCD74665B576027AA65D2D0 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TochkaTask/Pods-TochkaTask-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TochkaTask/Pods-TochkaTask-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TochkaTask/Pods-TochkaTask-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		916546F425D0299E00E29EB2 /* Sources */ = {
@@ -180,6 +261,9 @@
 			files = (
 				9165470625D0299E00E29EB2 /* TochkaTask.xcdatamodeld in Sources */,
 				9165471D25D02DCD00E29EB2 /* NewsViewModel.swift in Sources */,
+				9165473925D10FB400E29EB2 /* MainView.swift in Sources */,
+				9165474525D1255200E29EB2 /* MainView + Extension.swift in Sources */,
+				9165474025D1170300E29EB2 /* APIClient.swift in Sources */,
 				9165470025D0299E00E29EB2 /* MainViewController.swift in Sources */,
 				916546FC25D0299E00E29EB2 /* AppDelegate.swift in Sources */,
 				916546FE25D0299E00E29EB2 /* SceneDelegate.swift in Sources */,
@@ -190,14 +274,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		9165470125D0299E00E29EB2 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				9165470225D0299E00E29EB2 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		9165470925D0299F00E29EB2 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -327,6 +403,7 @@
 		};
 		9165471025D0299F00E29EB2 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 83097CAE89056DC4E6A390E4 /* Pods-TochkaTask.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -346,6 +423,7 @@
 		};
 		9165471125D0299F00E29EB2 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4CC36D54E928C8A1234133FE /* Pods-TochkaTask.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
