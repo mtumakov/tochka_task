@@ -11,22 +11,21 @@ import Alamofire
 enum ViewData {
     case initial
     case loading
-    case success(NewsResponse)
+    case success(ArticlesResponse)
     case failure
     
-    struct NewsResponse: Codable {
+    struct ArticlesResponse: Codable {
         let status: String
         let totalResults: Int
-        let articles: [NewsData]
+        let articles: [Article]
     }
 
-    struct NewsData: Codable {
+    struct Article: Codable {
         var author: String?
         var title: String?
         var description: String?
-        var url: String?
-        var urlToImage: String?
+        var url: URL?
+        var urlToImage: URL?
         var publishedAt: String?
-        var content: String?
     }
 }

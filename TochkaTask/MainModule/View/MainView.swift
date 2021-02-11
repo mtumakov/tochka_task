@@ -14,12 +14,14 @@ class MainView: UIView {
         }
     }
     
-    lazy var titleLabel = makeTitleLabel()
+    lazy var tableView = makeTableView()
     lazy var activityIndicator = makeActivityIndicatorView()
+    
+    var tableSize = 0
+    var articles: [ViewData.Article] = []
     
     override func layoutSubviews() {
         super.layoutSubviews()
-        titleLabel.text = "Some text"
         self.backgroundColor = .yellow
         switch viewData {
         case .initial:
@@ -45,6 +47,10 @@ class MainView: UIView {
         }
     }
     
-    private func update(viewData: ViewData.NewsResponse?, isHidden: Bool) {
+    private func update(viewData: ViewData.ArticlesResponse?, isHidden: Bool) {
+        if let data = viewData {
+            self.articles = data.articles
+            tableView.reloadData()
+        }
     }
 }

@@ -9,7 +9,7 @@ import UIKit
 
 class MainViewController: UIViewController {
     private var viewModel: NewsViewModelProtocol!
-    private var tableView: MainView!
+    private var mainView: MainView!
     
     override func viewDidLoad() {
         viewModel = NewsViewModel()
@@ -20,18 +20,15 @@ class MainViewController: UIViewController {
 
     private func createView() {
         viewModel.startFetch()
-        tableView = MainView()
-        tableView.frame = CGRect(x: 0, y: 0, width: 200, height: 200)
-        tableView.center = view.center
-        view.addSubview(tableView)
+        mainView = MainView()
+        mainView.frame = CGRect.init(origin: .zero, size: self.view.frame.size)
+        view.addSubview(mainView)
     }
     
     private func updateView() {
         viewModel.updateViewData = { [weak self] viewData in
-            self?.tableView.viewData = viewData
+            self?.mainView.viewData = viewData
         }
     }
-    
-    
 }
 

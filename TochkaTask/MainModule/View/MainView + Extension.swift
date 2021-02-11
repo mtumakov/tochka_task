@@ -7,7 +7,7 @@
 
 import UIKit
 
-extension MainView {
+extension MainView: UITableViewDelegate, UITableViewDataSource {
     func makeActivityIndicatorView() -> UIActivityIndicatorView {
         let activityIndicator = UIActivityIndicatorView(style: .large)
         activityIndicator.color = .gray
@@ -17,6 +17,22 @@ extension MainView {
         activityIndicator.topAnchor.constraint(equalToSystemSpacingBelow: topAnchor, multiplier: 5).isActive = true
         activityIndicator.centerXAnchor.constraint(equalTo: centerXAnchor).isActive = true
         return activityIndicator
+    }
+    
+    func makeTableView() -> UITableView {
+        let tableView = UITableView.init(frame: .zero, style: UITableView.Style.grouped)
+        addSubview(tableView)
+        tableView.register(TableViewCell.self, forCellReuseIdentifier: "TableViewCell")
+        tableView.estimatedRowHeight = CGFloat(40)
+        tableView.delegate = self
+        tableView.dataSource = self
+        tableView.backgroundColor = .green
+        tableView.translatesAutoresizingMaskIntoConstraints = false
+        tableView.topAnchor.constraint(equalTo: topAnchor).isActive = true
+        tableView.leadingAnchor.constraint(equalTo: leadingAnchor).isActive = true
+        tableView.trailingAnchor.constraint(equalTo: trailingAnchor).isActive = true
+        tableView.bottomAnchor.constraint(equalTo: bottomAnchor).isActive = true
+        return tableView
     }
     
     func makeTitleLabel() -> UILabel {
@@ -40,5 +56,20 @@ extension MainView {
         label.font = UIFont.systemFont(ofSize: size)
         addSubview(label)
         return label
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return articles.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = self.tableView.dequeueReusableCell(withIdentifier: "TableViewCell", for: indexPath) as! TableViewCell
+        cell.textLabel!.font = UIFont.systemFont(ofSize: 18)
+        cell.textLabel?.numberOfLines = 0
+        cell.accessoryType = .detailButton
+
+        let item = articles[indexPath.row]
+        cell.textLabel?.text = item.title
+        return cell
     }
 }

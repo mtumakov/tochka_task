@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import CoreData
 
 protocol NewsViewModelProtocol {
     var updateViewData: ((ViewData)-> ())? { get set }
@@ -14,13 +15,14 @@ protocol NewsViewModelProtocol {
 
 final class NewsViewModel: NewsViewModelProtocol {
     var updateViewData: ((ViewData) -> ())?
+    private let coreDataManager = CoreDataManager()
     
     init() {
         updateViewData?(.initial)
     }
     
     public func startFetch() {
-        updateViewData?(.loading)
+        self.updateViewData?(.loading)
         APIClient.fetch() { result in
             switch result {
                 case .success(let success):

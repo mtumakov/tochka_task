@@ -19,6 +19,8 @@
 		9165473925D10FB400E29EB2 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9165473825D10FB400E29EB2 /* MainView.swift */; };
 		9165474025D1170300E29EB2 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9165473F25D1170300E29EB2 /* APIClient.swift */; };
 		9165474525D1255200E29EB2 /* MainView + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9165474425D1255200E29EB2 /* MainView + Extension.swift */; };
+		91E4BA9B25D3BECE001C3571 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91E4BA9A25D3BECE001C3571 /* TableViewCell.swift */; };
+		91E4BAA625D4F6CC001C3571 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91E4BAA525D4F6CC001C3571 /* CoreDataManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +39,8 @@
 		9165473825D10FB400E29EB2 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		9165473F25D1170300E29EB2 /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
 		9165474425D1255200E29EB2 /* MainView + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MainView + Extension.swift"; sourceTree = "<group>"; };
+		91E4BA9A25D3BECE001C3571 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		91E4BAA525D4F6CC001C3571 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		E36945B8E4D5EB32DF5F6B7B /* Pods_TochkaTask.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TochkaTask.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -98,6 +102,7 @@
 				916546FF25D0299E00E29EB2 /* MainViewController.swift */,
 				9165473825D10FB400E29EB2 /* MainView.swift */,
 				9165474425D1255200E29EB2 /* MainView + Extension.swift */,
+				91E4BA9A25D3BECE001C3571 /* TableViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -105,6 +110,7 @@
 		9165471525D02C9200E29EB2 /* MainModule */ = {
 			isa = PBXGroup;
 			children = (
+				91E4BA9925D3BBA2001C3571 /* CoreData */,
 				9165472C25D05A4700E29EB2 /* Network */,
 				9165471B25D02DBB00E29EB2 /* ViewModel */,
 				9165471725D02CBC00E29EB2 /* Model */,
@@ -135,6 +141,14 @@
 				9165473F25D1170300E29EB2 /* APIClient.swift */,
 			);
 			path = Network;
+			sourceTree = "<group>";
+		};
+		91E4BA9925D3BBA2001C3571 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				91E4BAA525D4F6CC001C3571 /* CoreDataManager.swift */,
+			);
+			path = CoreData;
 			sourceTree = "<group>";
 		};
 		AE4958ACA4EBD9128CC6D238 /* Pods */ = {
@@ -264,10 +278,12 @@
 				9165473925D10FB400E29EB2 /* MainView.swift in Sources */,
 				9165474525D1255200E29EB2 /* MainView + Extension.swift in Sources */,
 				9165474025D1170300E29EB2 /* APIClient.swift in Sources */,
+				91E4BA9B25D3BECE001C3571 /* TableViewCell.swift in Sources */,
 				9165470025D0299E00E29EB2 /* MainViewController.swift in Sources */,
 				916546FC25D0299E00E29EB2 /* AppDelegate.swift in Sources */,
 				916546FE25D0299E00E29EB2 /* SceneDelegate.swift in Sources */,
 				9165471925D02CCD00E29EB2 /* ViewData.swift in Sources */,
+				91E4BAA625D4F6CC001C3571 /* CoreDataManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
