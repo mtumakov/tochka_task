@@ -16,9 +16,8 @@ class MainView: UIView {
     
     lazy var tableView = makeTableView()
     lazy var activityIndicator = makeActivityIndicatorView()
-    
-    var tableSize = 0
-    var articles: [ViewData.Article] = []
+    weak var delegate: ViewControllerDelegate?
+    var articles: [ArticleMO] = []
     
     override func layoutSubviews() {
         super.layoutSubviews()
@@ -26,11 +25,6 @@ class MainView: UIView {
         switch viewData {
         case .initial:
             update(viewData: nil, isHidden: true)
-            activityIndicator.isHidden = true
-            activityIndicator.stopAnimating()
-            break
-        case .loading:
-            update(viewData: nil, isHidden: false)
             activityIndicator.isHidden = false
             activityIndicator.startAnimating()
             break
@@ -47,9 +41,9 @@ class MainView: UIView {
         }
     }
     
-    private func update(viewData: ViewData.ArticlesResponse?, isHidden: Bool) {
+    private func update(viewData: [ArticleMO]?, isHidden: Bool) {
         if let data = viewData {
-            self.articles = data.articles
+            self.articles = data
             tableView.reloadData()
         }
     }

@@ -7,7 +7,12 @@
 
 import UIKit
 
-class MainViewController: UIViewController {
+protocol ViewControllerDelegate: class {
+    func nextPage()
+    func openDetailedArticle(article: ArticleMO)
+}
+
+class MainViewController: UIViewController, ViewControllerDelegate {
     private var viewModel: NewsViewModelProtocol!
     private var mainView: MainView!
     
@@ -22,6 +27,7 @@ class MainViewController: UIViewController {
         viewModel.startFetch()
         mainView = MainView()
         mainView.frame = CGRect.init(origin: .zero, size: self.view.frame.size)
+        mainView.delegate = self
         view.addSubview(mainView)
     }
     
@@ -29,6 +35,15 @@ class MainViewController: UIViewController {
         viewModel.updateViewData = { [weak self] viewData in
             self?.mainView.viewData = viewData
         }
+    }
+    
+    func nextPage() {
+        viewModel.fetchNextPage()
+    }
+    
+    func openDetailedArticle(article: ArticleMO) {
+        let avc = ArticleViewController(article: article)
+        present(avc, animated: true, completion: nil)
     }
 }
 
