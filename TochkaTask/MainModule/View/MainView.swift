@@ -14,21 +14,17 @@ class MainView: UIView {
         }
     }
     
-    lazy var titleLabel = makeTitleLabel()
+    lazy var tableView = makeTableView()
     lazy var activityIndicator = makeActivityIndicatorView()
+    weak var delegate: ViewControllerDelegate?
+    var articles: [ArticleMO] = []
     
     override func layoutSubviews() {
         super.layoutSubviews()
-        titleLabel.text = "Some text"
         self.backgroundColor = .yellow
         switch viewData {
         case .initial:
             update(viewData: nil, isHidden: true)
-            activityIndicator.isHidden = true
-            activityIndicator.stopAnimating()
-            break
-        case .loading:
-            update(viewData: nil, isHidden: false)
             activityIndicator.isHidden = false
             activityIndicator.startAnimating()
             break
@@ -45,6 +41,10 @@ class MainView: UIView {
         }
     }
     
-    private func update(viewData: ViewData.NewsResponse?, isHidden: Bool) {
+    private func update(viewData: [ArticleMO]?, isHidden: Bool) {
+        if let data = viewData {
+            self.articles = data
+            tableView.reloadData()
+        }
     }
 }

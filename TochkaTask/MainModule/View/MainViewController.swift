@@ -7,9 +7,14 @@
 
 import UIKit
 
-class MainViewController: UIViewController {
+protocol ViewControllerDelegate: class {
+    func nextPage()
+    func openDetailedArticle(article: ArticleMO)
+}
+
+class MainViewController: UIViewController, ViewControllerDelegate {
     private var viewModel: NewsViewModelProtocol!
-    private var tableView: MainView!
+    private var mainView: MainView!
     
     override func viewDidLoad() {
         viewModel = NewsViewModel()
@@ -20,18 +25,25 @@ class MainViewController: UIViewController {
 
     private func createView() {
         viewModel.startFetch()
-        tableView = MainView()
-        tableView.frame = CGRect(x: 0, y: 0, width: 200, height: 200)
-        tableView.center = view.center
-        view.addSubview(tableView)
+        mainView = MainView()
+        mainView.frame = CGRect.init(origin: .zero, size: self.view.frame.size)
+        mainView.delegate = self
+        view.addSubview(mainView)
     }
     
     private func updateView() {
         viewModel.updateViewData = { [weak self] viewData in
-            self?.tableView.viewData = viewData
+            self?.mainView.viewData = viewData
         }
     }
     
+    func nextPage() {
+        viewModel.fetchNextPage()
+    }
     
+    func openDetailedArticle(article: ArticleMO) {
+        let avc = ArticleViewController(article: article)
+        present(avc, animated: true, completion: nil)
+    }
 }
 
