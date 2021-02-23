@@ -32,22 +32,30 @@ class ArticleViewController: UIViewController, ArticleViewControllerDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .white
+        view.backgroundColor = .red
         createView()
     }
     
     private func createView() {
-        articleView = ArticleView()
-        articleView.frame = CGRect.init(origin: .zero, size: self.view.frame.size)
-        articleView.delegate = self
-        articleView.titleView.text = article?.title
-        articleView.contentView.text = article?.desc
-        articleView.image.downloaded(from: article?.urlToImage)
-        
+        articleView = ArticleView(frame:CGRect(x: 20, y: 20, width: view.frame.size.width - 40, height: view.frame.size.height - 40))
+        articleView.backgroundColor = .green
         view.addSubview(articleView)
+        articleView.translatesAutoresizingMaskIntoConstraints = false
+        articleView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor).isActive = true
+        articleView.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
+        articleView.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
+        articleView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -100).isActive = true
+        
+        articleView.avcDelegate = self
+
+        articleView.titleView.text = article?.title
     }
     
     func dismissView() {
         self.dismiss(animated: true)
+    }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
     }
 }

@@ -7,23 +7,28 @@
 
 import UIKit
 
-class ArticleView: UIView {
+class ArticleView: UIScrollView {
     lazy var contentView = makeContentView()
-    lazy var scrollView = makeScrollView()
     lazy var backButton = makeBackButton()
     lazy var imageView = makeImageView()
     lazy var titleView = makeTitleView()
-    lazy var image = makeImage()
     
-    weak var delegate: ArticleViewControllerDelegate?
+    weak var avcDelegate: ArticleViewControllerDelegate?
+    
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
     
     override func layoutSubviews() {
         super.layoutSubviews()
-        
         backButton.addTarget(self, action: #selector(returnButtonTapped(_:)), for: .touchUpInside)
     }
     
     @objc func returnButtonTapped(_ sender: Any) {
-        delegate?.dismissView()
+        avcDelegate?.dismissView()
     }
 }

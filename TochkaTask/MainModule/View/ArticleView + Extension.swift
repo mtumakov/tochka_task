@@ -8,17 +8,6 @@
 import UIKit
 
 extension ArticleView {
-    func makeScrollView() -> UIScrollView {
-        let scrollView = UIScrollView()
-        addSubview(scrollView)
-        scrollView.backgroundColor = .yellow
-        scrollView.translatesAutoresizingMaskIntoConstraints = false
-        scrollView.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor).isActive = true
-        scrollView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 12).isActive = true
-        scrollView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -12).isActive = true
-        scrollView.bottomAnchor.constraint(equalTo: bottomAnchor).isActive = true
-        return scrollView
-    }
     
     func makeBackButton() -> UIButton {
         let button = UIButton()
@@ -30,8 +19,8 @@ extension ArticleView {
         button.translatesAutoresizingMaskIntoConstraints = false
         button.widthAnchor.constraint(equalToConstant: 100).isActive = true
         button.heightAnchor.constraint(equalToConstant: 20).isActive = true
-        button.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -130).isActive = true
-        button.centerXAnchor.constraint(equalTo: centerXAnchor).isActive = true
+        button.bottomAnchor.constraint(equalTo: superview?.bottomAnchor ?? bottomAnchor, constant: -50).isActive = true
+        button.centerXAnchor.constraint(equalTo: superview?.centerXAnchor ?? centerXAnchor).isActive = true
         return button
     }
     
@@ -41,8 +30,8 @@ extension ArticleView {
         titleLabel.numberOfLines = 0
         titleLabel.textAlignment = .center
 
-        titleLabel.topAnchor.constraint(equalTo: scrollView.topAnchor).isActive = true
-        titleLabel.widthAnchor.constraint(equalTo: scrollView.widthAnchor).isActive = true
+        titleLabel.topAnchor.constraint(equalTo: topAnchor).isActive = true
+        titleLabel.widthAnchor.constraint(equalTo: widthAnchor).isActive = true
         return titleLabel
     }
     
@@ -51,7 +40,7 @@ extension ArticleView {
         contentLabel.font = UIFont.systemFont(ofSize: 18)
         contentLabel.numberOfLines = 0
         contentLabel.topAnchor.constraint(equalTo: self.imageView.bottomAnchor, constant: 12).isActive = true
-        contentLabel.widthAnchor.constraint(equalTo: scrollView.widthAnchor).isActive = true
+        contentLabel.widthAnchor.constraint(equalTo: widthAnchor).isActive = true
         return contentLabel
     }
     
@@ -59,28 +48,20 @@ extension ArticleView {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.textColor = .black
-        label.backgroundColor = .red
         label.sizeToFit()
         label.font = UIFont.systemFont(ofSize: size)
-        scrollView.addSubview(label)
+        addSubview(label)
         return label
     }
     
-    func makeImageView() -> UIView {
-        let imageView = UIView()
-        scrollView.addSubview(imageView)
-        imageView.sizeToFit()
+    func makeImageView() -> UIImageView {
+        let imageView = UIImageView()
+        addSubview(imageView)
+        imageView.backgroundColor = .blue
         imageView.translatesAutoresizingMaskIntoConstraints = false
-        imageView.topAnchor.constraint(equalTo: self.titleView.bottomAnchor, constant: 12).isActive = true
-        imageView.widthAnchor.constraint(equalTo: scrollView.widthAnchor).isActive = true
+        imageView.topAnchor.constraint(equalTo: self.titleView.bottomAnchor).isActive = true
+        imageView.widthAnchor.constraint(equalTo: widthAnchor).isActive = true
         return imageView
-    }
-    
-    func makeImage() -> UIImageView {
-        let image = UIImageView()
-        imageView.addSubview(image)
-        image.frame = CGRect.init(origin: .zero, size: imageView.frame.size)
-        return image
     }
 }
 

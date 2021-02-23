@@ -11,6 +11,7 @@
 		9114450F25E010AA00BA6DCF /* ArticleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9114450E25E010AA00BA6DCF /* ArticleViewController.swift */; };
 		9114451225E012A300BA6DCF /* ArticleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9114451125E012A300BA6DCF /* ArticleView.swift */; };
 		9114451525E012AF00BA6DCF /* ArticleView + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9114451425E012AF00BA6DCF /* ArticleView + Extension.swift */; };
+		9114451825E4FE7D00BA6DCF /* DetailedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9114451725E4FE7D00BA6DCF /* DetailedViewController.swift */; };
 		916546FC25D0299E00E29EB2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 916546FB25D0299E00E29EB2 /* AppDelegate.swift */; };
 		916546FE25D0299E00E29EB2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 916546FD25D0299E00E29EB2 /* SceneDelegate.swift */; };
 		9165470025D0299E00E29EB2 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 916546FF25D0299E00E29EB2 /* MainViewController.swift */; };
@@ -32,6 +33,7 @@
 		9114450E25E010AA00BA6DCF /* ArticleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleViewController.swift; sourceTree = "<group>"; };
 		9114451125E012A300BA6DCF /* ArticleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleView.swift; sourceTree = "<group>"; };
 		9114451425E012AF00BA6DCF /* ArticleView + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ArticleView + Extension.swift"; sourceTree = "<group>"; };
+		9114451725E4FE7D00BA6DCF /* DetailedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailedViewController.swift; sourceTree = "<group>"; };
 		916546F825D0299E00E29EB2 /* TochkaTask.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TochkaTask.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		916546FB25D0299E00E29EB2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		916546FD25D0299E00E29EB2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -112,6 +114,7 @@
 				9114450E25E010AA00BA6DCF /* ArticleViewController.swift */,
 				9114451125E012A300BA6DCF /* ArticleView.swift */,
 				9114451425E012AF00BA6DCF /* ArticleView + Extension.swift */,
+				9114451725E4FE7D00BA6DCF /* DetailedViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -284,6 +287,7 @@
 			files = (
 				9165470625D0299E00E29EB2 /* TochkaTask.xcdatamodeld in Sources */,
 				9114450F25E010AA00BA6DCF /* ArticleViewController.swift in Sources */,
+				9114451825E4FE7D00BA6DCF /* DetailedViewController.swift in Sources */,
 				9165471D25D02DCD00E29EB2 /* NewsViewModel.swift in Sources */,
 				9165473925D10FB400E29EB2 /* MainView.swift in Sources */,
 				9165474525D1255200E29EB2 /* MainView + Extension.swift in Sources */,
