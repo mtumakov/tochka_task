@@ -42,7 +42,7 @@ class MainViewController: UIViewController, ViewControllerDelegate {
     }
     
     func openDetailedArticle(article: ArticleMO) {
-        let avc = DetailedEventViewController(article: article)
+        let avc = ArticleViewController(article: article)
         present(avc, animated: true, completion: nil)
     }
 }
