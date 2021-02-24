@@ -9,7 +9,7 @@
 import UIKit
 
 
-class DetailedEventViewController: UIViewController {
+class ArticleViewController: UIViewController {
     let article: ArticleMO?
     
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
