@@ -23,13 +23,11 @@ extension MainView: UITableViewDelegate, UITableViewDataSource {
     func makeTableView() -> UITableView {
         let tableView = UITableView.init(frame: .zero, style: UITableView.Style.grouped)
         addSubview(tableView)
-        tableView.register(TableViewCell.self, forCellReuseIdentifier: "TableViewCell")
         tableView.estimatedRowHeight = CGFloat(40)
         tableView.delegate = self
         tableView.dataSource = self
-        tableView.backgroundColor = .green
         tableView.translatesAutoresizingMaskIntoConstraints = false
-        tableView.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor).isActive = true
+        tableView.topAnchor.constraint(equalTo: topAnchor).isActive = true
         tableView.leadingAnchor.constraint(equalTo: leadingAnchor).isActive = true
         tableView.trailingAnchor.constraint(equalTo: trailingAnchor).isActive = true
         tableView.bottomAnchor.constraint(equalTo: bottomAnchor).isActive = true
@@ -40,7 +38,6 @@ extension MainView: UITableViewDelegate, UITableViewDataSource {
         let titleLabel = makeLabel(size: 20)
         titleLabel.font = UIFont.boldSystemFont(ofSize: 20)
         titleLabel.numberOfLines = 0
-        titleLabel.backgroundColor = .blue
         titleLabel.textAlignment = .center
         titleLabel.centerXAnchor.constraint(equalTo: centerXAnchor).isActive = true
         titleLabel.centerYAnchor.constraint(equalTo: centerYAnchor).isActive = true
@@ -69,12 +66,9 @@ extension MainView: UITableViewDelegate, UITableViewDataSource {
         let cell = UITableViewCell(style: UITableViewCell.CellStyle.subtitle, reuseIdentifier: "TableViewCell")
         cell.textLabel!.font = UIFont.systemFont(ofSize: 18)
         cell.textLabel?.numberOfLines = 0
-        cell.textLabel?.backgroundColor = .green
-        cell.accessoryType = .detailButton
+        cell.accessoryType = .none
         
         cell.detailTextLabel?.font = UIFont.systemFont(ofSize: 12)
-        cell.detailTextLabel?.backgroundColor = .yellow
-        cell.detailTextLabel?.textColor = .black
         cell.detailTextLabel?.numberOfLines = 1
 
         let item = articles[indexPath.row]
@@ -97,5 +91,24 @@ extension MainView {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         delegate?.openDetailedArticle(article: articles[indexPath.row])
+    }
+    
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let headerView = UIView.init(frame: CGRect.init(x: 0, y: 0, width: tableView.frame.width, height: 50))
+
+        let label = UILabel()
+        label.frame = CGRect.init(x: 5, y: 5, width: headerView.frame.width-10, height: headerView.frame.height-10)
+        label.text = "Новсти"
+        label.font = UIFont.boldSystemFont(ofSize: 16)
+        label.textColor = UIColor.systemGreen
+    
+
+        headerView.addSubview(label)
+
+        return headerView
+    }
+    
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 50
     }
 }

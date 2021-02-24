@@ -20,7 +20,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.windowScene = windowScene
         window?.rootViewController = MainViewController()    // In ViewController.swift
-        window?.rootViewController?.view.backgroundColor = .white  // So we can see it
+        window?.rootViewController?.view.backgroundColor = .systemBackground  // So we can see it
+        window?.rootViewController?.view.overrideUserInterfaceStyle = .dark
         window?.makeKeyAndVisible()
     }
 
