@@ -79,7 +79,7 @@ class DetailedEventViewController: UIViewController {
             imageView.topAnchor.constraint(equalTo: titleView.bottomAnchor, constant: 16)
         ])
         
-        if article?.urlToImage != nil {
+        if article?.urlToImage == nil {
             imageView.heightAnchor.constraint(equalToConstant: 5).isActive = true
         } else {
             imageView.heightAnchor.constraint(equalTo: imageView.widthAnchor).isActive = true
@@ -112,7 +112,7 @@ class DetailedEventViewController: UIViewController {
             print("image link - \(imageLink)")
             let image = UIImageView()
             imageView.addSubview(image)
-            image.downloaded(from: imageLink)
+            image.downloaded(from: imageLink, contentMode: .scaleAspectFill)
             image.fillSuperview()
             image.alignmentRect(forFrame: imageView.frame)
         }
@@ -164,5 +164,29 @@ extension UIView {
     
     func fillSuperview() {
         anchor(top: superview?.topAnchor, left: superview?.leftAnchor, bottom: superview?.bottomAnchor, right: superview?.rightAnchor)
+    }
+}
+
+extension UIImageView {
+    func downloaded(from url: URL, contentMode mode: UIView.ContentMode = .scaleAspectFit) {
+        contentMode = mode
+        URLSession.shared.dataTask(with: url) { data, response, error in
+            guard
+                let httpURLResponse = response as? HTTPURLResponse, httpURLResponse.statusCode == 200,
+                let mimeType = response?.mimeType, mimeType.hasPrefix("image"),
+                let data = data, error == nil,
+                let image = UIImage(data: data)
+                else { return }
+            DispatchQueue.main.async() {
+                self.image = image
+            }
+            }.resume()
+    }
+    func downloaded(from link: String?, contentMode mode: UIView.ContentMode = .scaleAspectFit) {
+        guard let link = link else {
+            return
+        }
+        guard let url = URL(string: link) else { return }
+        downloaded(from: url, contentMode: mode)
     }
 }

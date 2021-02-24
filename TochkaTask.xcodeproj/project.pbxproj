@@ -8,9 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		8DC8D46643EFE3CEE4C64E7B /* Pods_TochkaTask.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E36945B8E4D5EB32DF5F6B7B /* Pods_TochkaTask.framework */; };
-		9114450F25E010AA00BA6DCF /* ArticleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9114450E25E010AA00BA6DCF /* ArticleViewController.swift */; };
-		9114451225E012A300BA6DCF /* ArticleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9114451125E012A300BA6DCF /* ArticleView.swift */; };
-		9114451525E012AF00BA6DCF /* ArticleView + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9114451425E012AF00BA6DCF /* ArticleView + Extension.swift */; };
 		9114451825E4FE7D00BA6DCF /* DetailedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9114451725E4FE7D00BA6DCF /* DetailedViewController.swift */; };
 		916546FC25D0299E00E29EB2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 916546FB25D0299E00E29EB2 /* AppDelegate.swift */; };
 		916546FE25D0299E00E29EB2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 916546FD25D0299E00E29EB2 /* SceneDelegate.swift */; };
@@ -23,16 +20,12 @@
 		9165473925D10FB400E29EB2 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9165473825D10FB400E29EB2 /* MainView.swift */; };
 		9165474025D1170300E29EB2 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9165473F25D1170300E29EB2 /* APIClient.swift */; };
 		9165474525D1255200E29EB2 /* MainView + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9165474425D1255200E29EB2 /* MainView + Extension.swift */; };
-		91E4BA9B25D3BECE001C3571 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91E4BA9A25D3BECE001C3571 /* TableViewCell.swift */; };
 		91E4BAA625D4F6CC001C3571 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91E4BAA525D4F6CC001C3571 /* CoreDataManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		4CC36D54E928C8A1234133FE /* Pods-TochkaTask.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TochkaTask.release.xcconfig"; path = "Target Support Files/Pods-TochkaTask/Pods-TochkaTask.release.xcconfig"; sourceTree = "<group>"; };
 		83097CAE89056DC4E6A390E4 /* Pods-TochkaTask.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TochkaTask.debug.xcconfig"; path = "Target Support Files/Pods-TochkaTask/Pods-TochkaTask.debug.xcconfig"; sourceTree = "<group>"; };
-		9114450E25E010AA00BA6DCF /* ArticleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleViewController.swift; sourceTree = "<group>"; };
-		9114451125E012A300BA6DCF /* ArticleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleView.swift; sourceTree = "<group>"; };
-		9114451425E012AF00BA6DCF /* ArticleView + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ArticleView + Extension.swift"; sourceTree = "<group>"; };
 		9114451725E4FE7D00BA6DCF /* DetailedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailedViewController.swift; sourceTree = "<group>"; };
 		916546F825D0299E00E29EB2 /* TochkaTask.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TochkaTask.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		916546FB25D0299E00E29EB2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -47,7 +40,6 @@
 		9165473825D10FB400E29EB2 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		9165473F25D1170300E29EB2 /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
 		9165474425D1255200E29EB2 /* MainView + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MainView + Extension.swift"; sourceTree = "<group>"; };
-		91E4BA9A25D3BECE001C3571 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		91E4BAA525D4F6CC001C3571 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		E36945B8E4D5EB32DF5F6B7B /* Pods_TochkaTask.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TochkaTask.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -110,10 +102,6 @@
 				916546FF25D0299E00E29EB2 /* MainViewController.swift */,
 				9165473825D10FB400E29EB2 /* MainView.swift */,
 				9165474425D1255200E29EB2 /* MainView + Extension.swift */,
-				91E4BA9A25D3BECE001C3571 /* TableViewCell.swift */,
-				9114450E25E010AA00BA6DCF /* ArticleViewController.swift */,
-				9114451125E012A300BA6DCF /* ArticleView.swift */,
-				9114451425E012AF00BA6DCF /* ArticleView + Extension.swift */,
 				9114451725E4FE7D00BA6DCF /* DetailedViewController.swift */,
 			);
 			path = View;
@@ -286,19 +274,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				9165470625D0299E00E29EB2 /* TochkaTask.xcdatamodeld in Sources */,
-				9114450F25E010AA00BA6DCF /* ArticleViewController.swift in Sources */,
 				9114451825E4FE7D00BA6DCF /* DetailedViewController.swift in Sources */,
 				9165471D25D02DCD00E29EB2 /* NewsViewModel.swift in Sources */,
 				9165473925D10FB400E29EB2 /* MainView.swift in Sources */,
 				9165474525D1255200E29EB2 /* MainView + Extension.swift in Sources */,
-				9114451525E012AF00BA6DCF /* ArticleView + Extension.swift in Sources */,
 				9165474025D1170300E29EB2 /* APIClient.swift in Sources */,
-				91E4BA9B25D3BECE001C3571 /* TableViewCell.swift in Sources */,
 				9165470025D0299E00E29EB2 /* MainViewController.swift in Sources */,
 				916546FC25D0299E00E29EB2 /* AppDelegate.swift in Sources */,
 				916546FE25D0299E00E29EB2 /* SceneDelegate.swift in Sources */,
 				9165471925D02CCD00E29EB2 /* ViewData.swift in Sources */,
-				9114451225E012A300BA6DCF /* ArticleView.swift in Sources */,
 				91E4BAA625D4F6CC001C3571 /* CoreDataManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -21,7 +21,6 @@ class MainView: UIView {
     
     override func layoutSubviews() {
         super.layoutSubviews()
-        self.backgroundColor = .yellow
         switch viewData {
         case .initial:
             update(viewData: nil, isHidden: true)
